@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="en" >
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		<title>angular-environment</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+	
+		 
+		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+		 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script> 
+		 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+		 <script src="../dist/angular-environment.js"></script>
+		
+	
+	    <script src="app2.js"></script>
+		<script src="app.js"></script>
+		
+	</head>
+
+	<body ng-app="myApp">
+	 
+
+  
+  <div ng-controller='FirstController'>  
+</div>
+
+<div ng-controller='SecondController'>
+    {{rslt}}
+</div>
+
+
+<div ng-controller='SomeController'>
+    {{environment}}
+</div>
+
+<div ng-app="apiService" ng-controller="customersCtrl"> 
+
+<ul>
+  <li ng-repeat="x in myData">
+    {{ x.Name + ', ' + x.Country }}
+  </li>
+</ul>
+
+</div>
+
+
+<div  ng-controller="PromiseCtrl"> 
+
+<ul>
+  <li ng-repeat="x in example1">
+    {{ x.Name + ', ' + x.Country }}
+  </li>
+</ul>
+
+</div>
+
+<div ng-controller="Pages">
+		<h1>AngularJS Environment Plugin</h1>
+		<p>Let's see if it works</p>
+		<hr>
+		<h3>The current environment is <span style="color: blue;">{{environment}}</span> and this are the their vars</h3>
+		<ul>
+			<li ng-repeat="(k, v) in vars"><code>{{k}} —→ {{v}}</code></li>
+		</ul>
+  </div>
+
+	</body>
+</html>
